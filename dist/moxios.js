@@ -1,7 +1,8 @@
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
+	if(typeof exports === 'object' && typeof module === 'object') {
 		module.exports = factory(require("axios"));
-	else if(typeof define === 'function' && define.amd)
+    module.exports.default = module.exports;
+  } else if(typeof define === 'function' && define.amd)
 		define(["axios"], factory);
 	else if(typeof exports === 'object')
 		exports["moxios"] = factory(require("axios"));
